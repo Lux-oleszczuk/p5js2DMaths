@@ -2,7 +2,7 @@
 // p = point
 let p = {}
 let pSize = 20;
-let speed = 2;
+let speed = 10;
 let theta;
 function setup() {
   createCanvas(innerWidth, innerHeight);
@@ -77,9 +77,39 @@ function draw() {
   ////////////////
   // angular velocity
   ////////////////
+  /*
   p.x += cos(theta) * speed;
   p.y += sin(theta) * speed;
   circle(p.x, p.y, pSize)
+  */
   ////////////////
+    // angle from position
+  ////////////////
+ /* // difference between object and target on y axis
+  let dy = mouseY - p.y;
+  // difference between object and target on x axis
+  let dx = mouseX - p.x;
+  // calculate angle between object and mouse
+  theta = atan2(dy, dx);
+  p.x += cos(theta) * speed;
+  p.y += sin(theta) * speed;
+  circle(p.x, p.y, pSize)
+  */
+   ////////////////
+    // use cos and sin to draw a circle
+  ////////////////
+  // define radius of circle
+  const r = 200;
+  // initially set angle as t = 0
+  // loop through 2 * PI, adding a little to t each time 
+  for(let t = 0; t < TAU; t += 0.2){
+    // multiplication will happen first
+    // then division
+    // then addition
+    let x = sin(t) * r + width/2; // offset by centre x 
+    let y = cos(t) * r + height/2; // offset by centre y
+    // draw points
+    circle(x, y, 10)
+  }
 
 }
