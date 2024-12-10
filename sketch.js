@@ -121,4 +121,16 @@ Grid art generative project idea:
 - when clicking on a single dot, it becomes bigger/darler/colour change/
   or clicking and sliding will attract he nearby dots making an effect of a drawn line (a part of a drawing)
 - user can click on dotes/slides through them to draw something
+
+Useful pages:
+https://medium.com/design-bootcamp/grid-explorations-in-generative-art-157cfde976a4
+https://p5js.org/sketches/2215583/
+https://www.vectorstock.com/royalty-free-vectors/synthwave-pink-purple-vectors
+
+
+Grid art generative project idea 2: 
+- 2D/ 3D grid retro animation inspired by 80s cyberpunk art
+- the glithy parts of the animation
+- RGB colours (mainly blue and pink/purple)
+- animation giving a vibe of time travelling to the past times
 */
