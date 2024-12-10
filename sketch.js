@@ -1,14 +1,14 @@
 
 // p = point
 let p = {}
-let pSize = 20;
-let speed = 6;
+let pSize = 10;
+let speed = 20;
 let theta;
 function setup() {
   createCanvas(innerWidth, innerHeight);
   // for random distribution
   // only execute draw once
-  // noLoop();
+  noLoop();
   // draw rectangle from centre
   rectMode(CENTER);
   // angular movement 
@@ -33,7 +33,7 @@ function draw() {
   ////////////////
   // random distribution
   ////////////////
- /* noStroke();
+  /*noStroke();
   // rgba 
   fill(35, 56, 60, 25);
   const size = 20;
@@ -41,13 +41,12 @@ function draw() {
     let x = random(size/2, width - size/2);
     let y = random(size/2, height - size/2)
     square(x, y, size)
-  }*/
+  } */
     ////////////////
   // gaussian distribution
   ////////////////
- /* noStroke();
+  noStroke();
   // rgba 
-  
   const size = 20;
   let x,y;
   for(let i = 0; i < 10000; i++){
@@ -66,8 +65,9 @@ function draw() {
     y = randomGaussian(height/2, 50)
     fill(0, 0, 255, 50)
     square(x, y, size)
-  }*/
-     ////////////////
+  }
+
+  ////////////////
   // radians
   ////////////////
 
@@ -82,7 +82,7 @@ function draw() {
   // circle(p.x, p.y, pSize)
   ////////////////
 
-    ////////////////
+  ////////////////
  /* // angle from position
   ////////////////
   // difference between object and target on Y axis
@@ -99,7 +99,7 @@ function draw() {
   ////////////////
   // use cos and sin to draw a circle
   ////////////////
-  // define radius of the circle
+  /*// define radius of the circle
   const r = 200;
   //initially set angle as t = 0
   //loop through 2 * PI, adding a little to each time
@@ -109,5 +109,16 @@ function draw() {
     let x = (sin(t) * r) + width/2;
     let y = (cos(t) * r) + height/2;
     circle(x, y, 5);
-  }
+  } */
 }
+
+// NOTES
+/*
+Grid art generative project idea: 
+- on load, dots are filling the screen like a wave
+- each dot is a size of 1 or 2 px
+- dots on the screen (RGB or black and white), it's the interactive canvas user can draw on it
+- when clicking on a single dot, it becomes bigger/darler/colour change/
+  or clicking and sliding will attract he nearby dots making an effect of a drawn line (a part of a drawing)
+- user can click on dotes/slides through them to draw something
+*/
