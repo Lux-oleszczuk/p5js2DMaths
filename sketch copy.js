@@ -1,7 +1,6 @@
 let arr = [];
 let cellClicked = [];
-let cellClickedReleased = [];
-const CELLSIZE = 20;
+const CELLSIZE = 50;
 
 
 function setup() {
@@ -12,8 +11,8 @@ function setup() {
         arr.push(i);
     }
 
-    for(let y = 0; y < height; y+= CELLSIZE) {
-        for (let x = 0; x < width; x+= CELLSIZE) {
+    for(let y = 0; y < CELLSIZE; y++) {
+        for (let x = 0; x < CELLSIZE; x++) {
             cellClicked.push(false)
         }
     }
@@ -22,10 +21,12 @@ function setup() {
 function draw() {
     background(220);
     let cellIndex = 0;
-    for (let y = 0; y < height; y+= CELLSIZE) {
-        for (let x = 0; x < width; x+=CELLSIZE) {
-            let index = y + x/CELLSIZE; // find the index
-            if (inside(x, y, CELLSIZE, CELLSIZE)) {
+    for (let y = 0; y < CELLSIZE; y++) {
+        for (let x = 0; x < CELLSIZE; x++) {
+            let xpos = x * 20;
+            let ypos = y * 20;
+            let index = y * 10 + x; // find the index
+            if (inside(xpos, ypos, 20, 20)) {
                 cellClicked[cellIndex] = true;
                 // were inside
                 fill(255, 0, 0);
@@ -35,9 +36,9 @@ function draw() {
                 fill(255);
             }
             stroke(0);
-            rect(x, y, CELLSIZE, CELLSIZE);
+            rect(xpos, ypos, CELLSIZE, CELLSIZE);
             // colorMode(HSB);
-            let h = map(index, 0, height, 0, 255);
+            let h = map(index, 0, 255, 0, 255);
             fill(h);
             // colorMode(RGB);
             cellIndex++;
