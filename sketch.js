@@ -28,7 +28,8 @@ function draw() {
             if (inside(x, y, CELLSIZE, CELLSIZE)) {
                 cellClicked[cellIndex] = true;
                 // were inside
-                fill(255, 0, 0);
+                //fill(255, 0, 0);
+                fill( 172, 26, 26);
             } else if (!cellClicked[cellIndex]) {
 
                 // not inside
